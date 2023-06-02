@@ -1,4 +1,5 @@
 import { Drawer } from "expo-router/drawer";
+import Icon from 'react-native-vector-icons/Feather';
 
 export default function RootLayout() {
   return (
@@ -8,6 +9,11 @@ export default function RootLayout() {
         options={{
           drawerLabel: "Index",
           title: "Index",
+          drawerIcon: ({ color, size }) => (
+            <Icon name="book" 
+            color={color} 
+            size={size} />
+          ),
         }}
       />
       <Drawer.Screen
@@ -31,6 +37,11 @@ export default function RootLayout() {
         options={{
           drawerLabel: "Home",
           title: "Home",
+          drawerIcon: ({ color, size }) => (
+            <Icon name="book" 
+            color={color} 
+            size={size} />
+          ),
         }}
       />
     </Drawer>
